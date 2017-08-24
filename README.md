@@ -3,7 +3,14 @@ Recently we had a postgres stored procedure regression where a function was upda
 
 This Golang tester should help catch these stored procedure regressions prior to committing.
 
+Run:
+ * Update constants.go to have the correct values
+ * run `go test` in this repo
+
 Assumptions:
  * There is a consistent start and end for all stored procedure definitions (see constants.go)
  * Migration files are ordered alphanumerically where the first one is the oldest migration
  * There might be others...
+
+ TODO:
+  * create a constants.go file for easier future re-use
